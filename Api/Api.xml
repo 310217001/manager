@@ -1,0 +1,1268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pi.PiManager.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Pi.PiManager.Controllers.BaseController">
+            <summary>
+            后台接口父类
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.BaseController.GetUserID">
+            <summary>
+            获取UserID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.BaseController.TokenDecode">
+            <summary>
+            解码Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Controllers.RoleController">
+            <summary>
+            角色接口
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.RoleController.List2">
+            <summary>
+            列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.RoleController.List(System.Int32,System.String)">
+            <summary>
+            列表显示带分页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.RoleController.Item(System.Int32)">
+            <summary>
+            详情显示
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.RoleController.Add(System.String,System.Int32)">
+            <summary>
+            添加
+            </summary>
+            <param name="Names">名称</param>
+            <param name="Sorting">顺序</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.RoleController.Update(Pi.PiManager.Model.Models.Role)">
+            <summary>
+            编辑
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.RoleController.Update(System.Int32,System.String,System.Int32)">
+            <summary>
+            部分编辑
+            </summary>
+            <param name="ID">ID</param>
+            <param name="Names">名称</param>
+            <param name="Sorting">顺序</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Controllers.RoleController.Delete(System.Int32)">
+            <summary>
+            根据ID删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.SetSession``1(System.String,``0)">
+            <summary>
+            存储对象
+            </summary>
+            <typeparam name="T">对象</typeparam>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.GetSession``1(System.String)">
+            <summary>
+            获取对象
+            </summary>
+            <typeparam name="T">对象</typeparam>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.SetSession(System.String,System.String)">
+            <summary>
+            设置Session
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.GetSession(System.String)">
+            <summary>
+            获取Session
+            </summary>
+            <param name="key">键</param>
+            <returns>返回对应的值</returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.RemoveSession(System.String)">
+            <summary>
+            清除Session
+            </summary>
+            <param name="key">键</param>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.ClearSession">
+            <summary>
+            清除所有Session
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.AddCookie(System.String,System.String)">
+            <summary>
+            添加cookie缓存不设置过期时间
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.AddCookie(System.String,System.String,System.Int32)">
+            <summary>
+            添加cookie缓存设置过期时间
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="time"></param>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.DeleteCookie(System.String)">
+            <summary>
+            删除cookie缓存
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Pi.PiManager.Api.CommonHelper.GetCookieValue(System.String)">
+            <summary>
+            根据键获取对应的cookie
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.IndexController">
+            <summary>
+            首页
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.IndexController.UpdatePwd(System.String,System.String,System.String)">
+            <summary>
+            修改密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.IndexController.Index">
+            <summary>
+            首页下拉菜单接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.IndexController.Index2">
+            <summary>
+            用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.IndexController.WelcomeNodesList">
+            <summary>
+            欢迎页展示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Info.AdvertController">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertController.GetadvertViewModel">
+            <summary>
+            获取分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertController.List(System.Int32,System.String,System.Nullable{System.Boolean},System.Int32,System.String,System.String)">
+            <summary>
+            列表
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="Title"></param>
+            <param name="IsEnable"></param>
+            <param name="TypeID"></param>
+            <param name="SelStartDate"></param>
+            <param name="SelEndDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertController.Item(System.Int32)">
+            <summary>
+            详情显示
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertController.Add(Pi.PiManager.Model.ViewModels.AdverViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="avm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertController.Update(Pi.PiManager.Model.ViewModels.AdverViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="avm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Info.AdvertTypeController">
+            <summary>
+            广告类型
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertTypeController.List(System.Int32,System.String)">
+            <summary>
+            列表显示
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="Title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertTypeController.Item(System.Int32)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertTypeController.Add(System.String,System.Int32,System.String)">
+            <summary>
+            添加
+            </summary>
+            <param name="Names">名称</param>
+            <param name="Sorting">顺序</param>
+            <param name="Remark">备注</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.AdvertTypeController.Update(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            修改
+            </summary>
+            <param name="ID"></param>
+            <param name="Names"></param>
+            <param name="Sorting"></param>
+            <param name="Remark"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController">
+            <summary>
+            文章管理
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.Postfile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传文件
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.PostImage(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.Item(System.Int32)">
+            <summary>
+            详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.List(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            文章展示
+            </summary>
+            <param name="pageIndex">当前页</param>
+            <param name="ArticleMenuID">栏目id</param>
+            <param name="State">状态</param>
+            <param name="Title">标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.GetMenuLevel">
+            <summary>
+            栏目数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.Update(Pi.PiManager.Model.ViewModels.API.ArticlePostViewModel)">
+            <summary>
+            修改
+            </summary>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.Add(Pi.PiManager.Model.ViewModels.API.ArticlePostViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleController.SetState(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Info.ArticleMenuController">
+            <summary>
+            栏目管理
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleMenuController.List(System.Nullable{System.Int32})">
+            <summary>
+            栏目列表
+            </summary>
+            <param name="State">状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleMenuController.Item(System.Int32)">
+            <summary>
+            根据id查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleMenuController.Item(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            栏目新增
+            </summary>
+            <param name="ParentID">父类id</param>
+            <param name="Names">名称</param>
+            <param name="ENames">存英文名或副标题</param>
+            <param name="Sorting">顺序</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleMenuController.Item(System.Int32,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            栏目更新
+            </summary>
+            <param name="ID">选择id</param>
+            <param name="ParentID">父类id</param>
+            <param name="Names">名称</param>
+            <param name="ENames">存英文名或副标题</param>
+            <param name="Sorting">顺序</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleMenuController.ModifyParentID(System.Int32,System.Int32)">
+            <summary>
+            更换父级
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.ArticleMenuController.Enable(System.String)">
+            <summary>
+            启用禁用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Info.MenuController">
+            <summary>
+            菜单管理
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.MenuController.List(System.Nullable{System.Boolean},System.String)">
+            <summary>
+            列表显示
+            </summary>
+            <param name="IsEnable">是否启用</param>
+            <param name="Title">标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.MenuController.Enable(System.String,System.Boolean)">
+            <summary>
+            启用禁用
+            </summary>
+            <param name="ID"></param>
+            <param name="IsEnable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.MenuController.Item(System.Int32)">
+            <summary>
+            详情显示
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.MenuController.GetMenu">
+            <summary>
+            查询下拉框菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.MenuController.Add(System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            添加菜单
+            </summary>
+            <param name="Names">名称</param>
+            <param name="Icon">图标</param>
+            <param name="Url">地址</param>
+            <param name="Remark">备注</param>
+            <param name="IsEnable">是否显示</param>
+            <param name="Sorting">顺序</param>
+            <param name="FID">父ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Info.MenuController.Update(Pi.PiManager.Model.Models.Menu)">
+            <summary>
+            编辑
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.CertificateController">
+            <summary>
+            证书
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.CertificateController.List(System.Int32,System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean})">
+            <summary>
+            列表显示
+            </summary>
+            <param name="pageIndex">页码</param>
+            <param name="Title">证书名</param>
+            <param name="ProviderID">服务商</param>
+            <param name="ProjectID">项目</param>
+            <param name="IsEnable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.CertificateController.Item(System.Int32)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.CertificateController.Add(Pi.PiManager.Model.ViewModels.API.APICertificateViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="certificate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.CertificateController.Update(System.Int32,Pi.PiManager.Model.ViewModels.API.APICertificateViewModel)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="certificate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.CertificateController.SetState(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.DomainNameController">
+            <summary>
+            域名
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Pi.PiManager.Api.Controllers.Admin.Main.DomainNameController.List(System.Int32,System.String,System.Nullable{System.Boolean})" -->
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.DomainNameController.Item(System.Int32)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="ID">域名ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.DomainNameController.Add(Pi.PiManager.Model.ViewModels.API.APIDomainNameViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="domainName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.DomainNameController.Update(System.Int32,Pi.PiManager.Model.ViewModels.API.APIDomainNameViewModel)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="domainName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.DomainNameController.SetState(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.ProjectController">
+            <summary>
+            项目
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectController.GetProjectViewModel">
+            <summary>
+            获取分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectController.GetProjects(System.String)">
+            <summary>
+            通过项目分类获取项目
+            </summary>
+            <param name="ProjectTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectController.List(System.Int32,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            列表显示
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="Title">标题</param>
+            <param name="ProjectTypeID">项目类型</param>
+            <param name="State">状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectController.Item(System.String)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="ID">项目ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController">
+            <summary>
+            项目节点
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController.GetList(System.Int32,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String)">
+            <summary>
+            项目节点列表显示
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="ProjectTypeID"></param>
+            <param name="ProjectID"></param>
+            <param name="IsEnable"></param>
+            <param name="State"></param>
+            <param name="Title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController.Item(System.Int32)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController.Add(Pi.PiManager.Model.ViewModels.API.APIProjectNodeViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController.Update(Pi.PiManager.Model.ViewModels.API.APIProjectNodeViewModel)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController.SetState(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController.GetMaintainList(System.Int32,System.String,System.String,System.Nullable{System.Boolean},System.String)">
+            <summary>
+            项目节点维护列表显示
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="ProjectTypeID"></param>
+            <param name="ProjectID"></param>
+            <param name="IsEnable"></param>
+            <param name="Title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectNodeController.AddMaintain(Pi.PiManager.Model.ViewModels.API.APIProjectNodeViewModel)">
+            <summary>
+            添加维护
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController">
+            <summary>
+            项目计划
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.GetPlanViewModel(System.String)">
+            <summary>
+            获取分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.PlanList(System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            计划列表
+            </summary>
+            <param name="ProjectID"></param>
+            <param name="ProjectNodeID"></param>
+            <param name="IsComplete"></param>
+            <param name="IsEnable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.PlanItemCha(Pi.PiManager.Model.ViewModels.API.APIProjectPlanViewmodel)">
+            <summary>
+            添加计划
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.ItemPlan(System.Int32)">
+            <summary>
+            计划显示详情
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.PlanItemCha(System.Int32,Pi.PiManager.Model.ViewModels.API.APIProjectPlanViewmodel)">
+            <summary>
+            修改计划
+            </summary>
+            <param name="id"></param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.SetPlanState(System.String)">
+            <summary>
+            计划删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.PlanComCha(Pi.PiManager.Model.ViewModels.API.APIPlanCommentViewModel)">
+            <summary>
+            添加计划日志
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.ItemPlanCom(System.Int32)">
+            <summary>
+            计划日志显示详情
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.PlanComCha(System.Int32,Pi.PiManager.Model.ViewModels.API.APIPlanCommentViewModel)">
+            <summary>
+            修改计划日志
+            </summary>
+            <param name="id"></param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectPlanController.SetPlanComState(System.String)">
+            <summary>
+            计划日志删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.ProjectTypeController">
+            <summary>
+            项目类型
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectTypeController.GetadvertViewModel">
+            <summary>
+            获取分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectTypeController.List(System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>
+            列表显示
+            </summary>
+            <param name="pageIndex">页码</param>
+            <param name="Title">项目类型标题</param>
+            <param name="State">状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectTypeController.Item(System.String)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="ID">项目类型ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.ProjectUserController">
+            <summary>
+            项目成员
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectUserController.GetTeamMembersViewModel">
+            <summary>
+            获取分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectUserController.TeamList(System.Int32,System.String,System.String,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Int32})">
+            <summary>
+            成员列表
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="Title"></param>
+            <param name="ProjectID"></param>
+            <param name="ProjectNodeID"></param>
+            <param name="IsEnable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectUserController.Addusers(Pi.PiManager.Model.ViewModels.API.APIProUserViewModel)">
+            <summary>
+            添加成员
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectUserController.TeamItem(System.Int32)">
+            <summary>
+            显示成员信息
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectUserController.Updateusers(System.Int32,Pi.PiManager.Model.ViewModels.API.APIProUserViewModel)">
+            <summary>
+            修改成员
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProjectUserController.SetTeamState(System.String)">
+            <summary>
+            成员删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.ProviderController">
+            <summary>
+            服务商
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProviderController.GetadvertViewModel">
+            <summary>
+            获取分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProviderController.List(System.Int32,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            列表显示
+            </summary>
+            <param name="pageIndex">页码</param>
+            <param name="Title">服务商名</param>
+            <param name="IsEnable">启用状态</param>
+            <returns></returns>       
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProviderController.Item(System.Int32)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="ID">服务商ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProviderController.Add(System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            添加
+            </summary>
+            <param name="Title">标题</param>
+            <param name="Note">备注</param>
+            <param name="Sorting">顺序</param>
+            <param name="IsEnable">启用状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProviderController.Update(System.Int32,System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            修改
+            </summary>
+            <param name="ID"></param>
+            <param name="Title">标题</param>
+            <param name="Note">备注</param>
+            <param name="Sorting">顺序</param>
+            <param name="IsEnable">启用状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ProviderController.SetState(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID">服务商ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.Main.ServerController">
+            <summary>
+            服务器
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ServerController.List(System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            列表显示
+            </summary>
+            <param name="pageIndex">页码</param>
+            <param name="Title">服务器名</param>
+            <param name="ProjectID">项目ID</param>
+            <param name="ProviderID">服务商ID</param>
+            <param name="System">操作系统</param>
+            <param name="RegisterDate">注册时间</param>
+            <param name="ExpireDate">到期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ServerController.Item(System.String)">
+            <summary>
+            显示详情
+            </summary>
+            <param name="ID">项目类型ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ServerController.Add(Pi.PiManager.Model.ViewModels.API.APIServerInfoViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="serverInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ServerController.Update(System.Int32,Pi.PiManager.Model.ViewModels.API.APIServerInfoViewModel)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="serverInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.Main.ServerController.SetState(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.System.ConfigBaseController">
+            <summary>
+            网络基本配置
+            </summary>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.System.ConfigController">
+            <summary>
+            全局配置
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ConfigController.List(System.Int32,System.String)">
+            <summary>
+            列表显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ConfigController.Item(System.Int32)">
+            <summary>
+            详情显示
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ConfigController.Add(System.String,System.String,System.String)">
+            <summary>
+            添加
+            </summary>
+            <param name="Title"></param>
+            <param name="Number"></param>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ConfigController.Update(Pi.PiManager.Model.Models.Config)">
+            <summary>
+            修改
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.System.ExceptionLogController">
+            <summary>
+            异常日志
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ExceptionLogController.List(System.Int32,System.Nullable{System.Int32},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Boolean})">
+            <summary>
+            列表显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ExceptionLogController.Solve(System.String)">
+            <summary>
+            批量处理
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ExceptionLogController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.ExceptionLogController.Item(System.Int32)">
+            <summary>
+            详情查看
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.System.LoginLogController">
+            <summary>
+            登录日志
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.LoginLogController.List(System.Int32,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            列表显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.LoginLogController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.System.PermissionsController">
+            <summary>
+            权限管理
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.PermissionsController.GetRoles">
+            <summary>
+            获取角色数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.PermissionsController.GetMenus">
+            <summary>
+            获取菜单数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.PermissionsController.UserList(System.Int32)">
+            <summary>
+            根据id显示权限
+            </summary>
+            <param name="RoleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.PermissionsController.SetMenus(System.Int32,System.String)">
+            <summary>
+            更新权限菜单
+            </summary>
+            <param name="RoleID"></param>
+            <param name="Menus"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.System.UserController">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.Item">
+            <summary>
+            自己详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.Item(System.Int32)">
+            <summary>
+            选择用户查看
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.GetRoleViewModel">
+            <summary>
+            获取角色全部信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.List(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            列表显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.SysItem(Pi.PiManager.Model.ViewModels.API.APIUserViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.SysItem2(System.Int32,Pi.PiManager.Model.ViewModels.API.APIUserViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="ID"></param>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.Export(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            a标签页面跳转导出
+            </summary>
+            <param name="RoleID">选择用户</param>
+            <param name="StateID">选择状态</param>
+            <param name="Title">选择标题</param>
+            <param name="Phone">选择手机号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.UserController.Import(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.Admin.System.WelcomeController">
+            <summary>
+            欢迎页
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.WelcomeController.ArticleCount">
+            <summary>
+            文章数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.WelcomeController.UsersCount">
+            <summary>
+            用户数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.WelcomeController.AdvertCount">
+            <summary>
+            广告数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.WelcomeController.UsersLoginCount">
+            <summary>
+            用户登录次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Controllers.Admin.System.WelcomeController.ExLoginCount">
+            <summary>
+            程序异常次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Controllers.UEditorController">
+            <summary>
+            百度富文本
+            </summary>
+        </member>
+        <member name="T:Pi.PiManager.Api.LoginController">
+            <summary>
+            登录
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.LoginController.Login(System.String,System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.LoginController.VerificationCode">
+            <summary>
+            获取验证码
+            </summary>
+            <returns>文件流</returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.ApiGroup.ApiGroupAttribute">
+            <summary>
+            系统分组特性
+            </summary>
+        </member>
+        <member name="T:Pi.PiManager.Api.ApiGroup.ApiGroupNames">
+            <summary>
+            系统分组枚举值
+            </summary>
+        </member>
+        <member name="F:Pi.PiManager.Api.ApiGroup.ApiGroupNames.AdminAuth">
+            <summary>
+            后台登录、主页
+            </summary>
+        </member>
+        <member name="F:Pi.PiManager.Api.ApiGroup.ApiGroupNames.AdminInfo">
+            <summary>
+            后台信息、广告
+            </summary>
+        </member>
+        <member name="F:Pi.PiManager.Api.ApiGroup.ApiGroupNames.AdminSystem">
+            <summary>
+            后台系统管理
+            </summary>
+        </member>
+        <member name="F:Pi.PiManager.Api.ApiGroup.ApiGroupNames.Main">
+            <summary>
+            项目管理
+            </summary>
+        </member>
+        <member name="T:Pi.PiManager.Api.ApiGroup.GroupInfoAttribute">
+            <summary>
+            系统模块枚举注释
+            </summary>
+        </member>
+        <member name="T:Pi.PiManager.Api.Extensions.AutoMapperSetup">
+            <summary>
+            Automapper 启动服务
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Extensions.ConfigureAutofac.Load(Autofac.ContainerBuilder)">
+            <summary>
+            加载调用
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:Pi.PiManager.Api.Extensions.JwtHelper.IssueJwt(Pi.PiManager.Api.Extensions.JwtHelper.TokenModelJwt)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Extensions.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Extensions.JwtHelper.SerializeJwt2(System.String)">
+            <summary>
+            解析 获取ID
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pi.PiManager.Api.Extensions.JwtHelper.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Pi.PiManager.Api.Extensions.JwtHelper.TokenModelJwt.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Pi.PiManager.Api.Extensions.JwtHelper.TokenModelJwt.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Pi.PiManager.Api.Extensions.JwtHelper.TokenModelJwt.Work">
+            <summary>
+            职能
+            </summary>
+        </member>
+        <member name="T:Pi.PiManager.Api.Filter.GlobalExceptionsFilter">
+            <summary>
+            全局异常错误日志
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Filter.GlobalExceptionsFilter.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Pi.PiManager.Api.Filter.JsonErrorResponse.Message">
+            <summary>
+            生产环境的消息
+            </summary>
+        </member>
+        <member name="P:Pi.PiManager.Api.Filter.JsonErrorResponse.DevelopmentMessage">
+            <summary>
+            开发环境的消息
+            </summary>
+        </member>
+        <member name="M:Pi.PiManager.Api.Helper.APIHelper.GetMenu(System.Int32,System.Collections.Generic.IEnumerable{Pi.PiManager.Model.Models.Menu},Pi.PiManager.Model.Models.Role)">
+            <summary>
+            获取菜单列表的子项
+            </summary>
+            <param name="FID"></param>
+            <param name="list2"></param>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Helper.ByteHelper.BytesToStream(System.Byte[])">
+            将 byte[] 转成 Stream
+        </member>
+        <member name="M:Pi.PiManager.Api.Helper.ImageFile.UpLoadPhoto(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            上传图片
+            </summary>
+            <param name="formFile"></param>
+            <param name="path">路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Helper.ImageFile.UpLoadFile(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="formFile"></param>
+            <param name="path">路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Helper.ImageFile.LoadingPhoto(System.String,System.String)">
+            <summary>
+            加载图片
+            </summary>
+            <param name="path"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Helper.SpireDocHelper.SwaggerConversHtml(System.String,System.String,System.String@)">
+            <summary>
+            静态页面转文件
+            </summary>
+            <param name="html">静态页面html</param>
+            <param name="type">文件类型</param>
+            <param name="contenttype">上下文类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pi.PiManager.Api.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            Autofac注入
+            </summary>
+            <param name="containerBuilder"></param>
+        </member>
+    </members>
+</doc>

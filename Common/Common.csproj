@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+	  <SccProjectName>SAK</SccProjectName>
+	  <SccProvider>SAK</SccProvider>
+	  <SccAuxPath>SAK</SccAuxPath>
+	  <SccLocalPath>SAK</SccLocalPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AssemblyName>Pi.Common</AssemblyName>
+		<RootNamespace>Pi.Common</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CSRedisCore" Version="3.6.6" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+		<PackageReference Include="sqlSugarCore" Version="5.0.1.5" />
+		<PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+	</ItemGroup>
+
+</Project>
